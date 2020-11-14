@@ -78,9 +78,9 @@ WSGI_APPLICATION = 'galleria.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'gallery',
-        'USER': 'moringa',
-    'PASSWORD':'moringa',
+        'NAME': 'tribune',
+        'USER': '<Your Database Username >',
+    'PASSWORD':'<Your Database Password>',
     }
 }
 
@@ -109,7 +109,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'Africa/Nairobi'
+TIME_ZONE = 'Africa/Kenya'
 
 USE_I18N = True
 
