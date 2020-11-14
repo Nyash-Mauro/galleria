@@ -126,8 +126,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-cloudinary.config(
-    cloud_name="dapwcit3i",
-    api_key="917726294659896",
-    api_secret="PeLRKhRoA2E-r-5ykRTpuEBNcH4"
-)
+
