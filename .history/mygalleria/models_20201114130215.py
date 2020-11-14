@@ -28,6 +28,6 @@ class Location(models.Model):
     @classmethod
     def update(cls,id,name):
         place = Location.objects.filter(id=id)
-        place.update(place=name)
+        # place.update(place=name)
 
 
