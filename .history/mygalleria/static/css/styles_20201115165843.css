@@ -1,0 +1,8 @@
+.navbar-inverse {
+  background-color: rgb(204, 219, 233);
+  overflow: hidden;
+  border-radius: 5px;
+}
+button {
+  background-color: rgb(16, 245, 168) !important;
+}
