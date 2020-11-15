@@ -1,8 +1,7 @@
 from django.test import TestCase
-from .models import Location, Category, mygalleria_image,Photo
+from .models import Location, Category, mygalleria_image
 
-class LocationTestClass(TestCase):
-    pass 
+
 class LocationTestClass(TestCase):
     '''
     test for Location class

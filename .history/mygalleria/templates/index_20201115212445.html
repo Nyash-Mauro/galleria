@@ -4,12 +4,12 @@
 <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
 
 <body>
-    <br>
     <div class="col-md-6">
         <div class="card">
             <a data-toggle="modal" data-target="#{{photo.id}}">
-                <img style="padding-top:40px; padding-bottom:40px;" src="{{photo.image.cdn_url}}" alt="Image"
-                    height="300" width="300"><br><br>
+                <img style="padding-top:40px; padding-bottom:40px;" src="{{mygallaria.image.url}}" alt="Image"
+                    height="300" width="300" class="img-responsive"><br><br>
+
             </a>
         </div>
     </div>
@@ -25,12 +25,12 @@
                         <p>{{photo.description}}</p>
                     </div>
                     <div class="modal-body">
-                        <img src="{{photo.image.cdn_url}}" alt="Image" width='500' length='600'>
+                        <img src="{{mygallaria.image.url}}" alt="Image" width='500' length='600'>
                         <p>location: {{photo.location}}</p><br>
 
                         <button class="btn btn-primary" onclick="imageurl('{{image.id}}-url')">Copy Image
                             link</button>
-                        <input class="form-control input-lg" type="text" value="{{photo.image.cdn_url}}"
+                        <input class="form-control input-lg" type="text" value="{{mygallaria.image.url}}"
                             id="{{image.id}}-url">
                     </div>
                 </div>
@@ -42,11 +42,8 @@
                         alert("Copied the link of image: " + image.value);
                     }
                 </script>
-
             </div>
         </div>
-
-
     </div>
     {%endfor%}
     {%endblock%}

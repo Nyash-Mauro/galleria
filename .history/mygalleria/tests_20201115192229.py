@@ -1,8 +1,7 @@
 from django.test import TestCase
-from .models import Location, Category, mygalleria_image,Photo
+from .models import Location, Category, mygalleria_image
 
-class LocationTestClass(TestCase):
-    pass 
+
 class LocationTestClass(TestCase):
     '''
     test for Location class
@@ -79,16 +78,16 @@ class mmygalleria_imageTestClass(TestCase):
 
     def test_get_all_images(self):
         images = mygalleria_image.objects.all()
-        self.mygalleria_imagee(mygalleria_image.name)
+        self.mygalleria_imagee(Image.name)
     # testing delete method
 
     def tearDown(self):
         Location.objects.all().delete()
         Category.objects.all().delete()
-        mygalleria_image.objects.all().delete()
+        Image.objects.all().delete()
     # testing get images by id Method
 
     def test_get_image_by_id(self):
         self.new_image.save_image()
-        image = mygalleria_image.get_image_by_id(1)
+        image = Image.get_image_by_id(1)
         self.assertEqual(image.id, 1)
