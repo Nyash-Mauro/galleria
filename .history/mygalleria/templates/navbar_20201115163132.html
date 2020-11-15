@@ -19,7 +19,7 @@
 
             <div class="col-sm-6 col-md-6 navbar-right">
 
-                <form class="navbar-form" role="search" action="{% url 'search_results' %}">
+                <form class="navbar-form" role="search" action{% url 'photo_album.views.upload' %}>
 
                     <div class="input-group">
                         <input type="text" class="form-control" placeholder="Search Category" name="category">

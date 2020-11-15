@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+
+                <div class="navbar-brand" href="">Chaet_noe Galleria</div>
+                <div class="navbar-brand" href=""></div>
+            </div>
+
+            <div class="col-sm-4 col-md-4 navbar-right">
+
+                <div id='backend_upload'>
+                    <form action="{% url "photo_album.views.upload" %}" method="post" enctype="multipart/form-data">
+
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search Category" name="category">
+                            <div class="input-group-btn">
+                                <button class="btn btn-primary" type="submit"><i
+                                        class="glyphicon glyphicon-search"></i></button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+    </nav>
+</body>
+
+</html>

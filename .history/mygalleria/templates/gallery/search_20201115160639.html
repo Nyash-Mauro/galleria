@@ -19,10 +19,10 @@
         {% if category %}
         {% for cat in category %}
 
-        <div class="col-md-6">
+        <div class="col-md-4">
             <div class="card">
                 <a data-toggle="modal" data-target="#{{cat.id}}">
-                    <img style="margin-top:20px; margin-bottom:20px;" src="{{cat.image.cdn_url}}" alt="Image"
+                    <img style="margin-top:20px; margin-bottom:20px;" s{% url "photo_album.views.upload" %} alt="Image"
                         height="200" width="300"><br>
                 </a>
             </div>

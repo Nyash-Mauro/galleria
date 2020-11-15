@@ -18,14 +18,12 @@
 
         {% if category %}
         {% for cat in category %}
-
-        <div class="col-md-6">
-            <div class="card">
-                <a data-toggle="modal" data-target="#{{cat.id}}">
-                    <img style="margin-top:20px; margin-bottom:20px;" src="{{cat.image.cdn_url}}" alt="Image"
-                        height="200" width="300"><br>
-                </a>
-            </div>
+        <div id='backend_upload'>
+            <form action="{% url "photo_album.views.upload" %}" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ backend_form }}
+                <input type="submit" value="Upload">
+            </form>
         </div>
         <div id="{{cat.id}}" class="modal fade" role="dialog"
             style="background-color:rgb(243, 48, 48);font-family: monospace;">

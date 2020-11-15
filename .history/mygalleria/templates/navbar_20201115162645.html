@@ -17,9 +17,10 @@
                 <div class="navbar-brand" href=""></div>
             </div>
 
-            <div class="col-sm-6 col-md-6 navbar-right">
+            <div class="col-sm-4 col-md-4 navbar-right">
 
-                <form class="navbar-form" role="search" action="{% url 'search_results' %}">
+                <div id='backend_upload'>
+                    <form action="{% url "photo_album.views.upload" %}" method="post" enctype="multipart/form-data">
 
                     <div class="input-group">
                         <input type="text" class="form-control" placeholder="Search Category" name="category">
