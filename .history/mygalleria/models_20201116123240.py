@@ -43,14 +43,16 @@ class Location(models.Model):
 
 
 class mygalleria_image(models.Model):
-    image = CloudinaryField('image', default="./media")
-    name = models.CharField(max_length=50)
-    description = models.TextField()
-    location = models.ForeignKey(Location, on_delete=models.CASCADE)
-    category = models.ForeignKey(Category, on_delete=models.CASCADE)
 
-    @classmethod
-    def display_photo(cls):
+
+image = CloudinaryField('image', default="")
+name = models.CharField(max_length=50)
+description = models.TextField()
+location = models.ForeignKey(Location, on_delete=models.CASCADE)
+ category = models.ForeignKey(Category, on_delete=models.CASCADE)
+
+  @classmethod
+   def display_photo(cls):
         photo = cls.objects.all()
         return photo
 
