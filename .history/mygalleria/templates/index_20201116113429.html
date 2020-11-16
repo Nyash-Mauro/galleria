@@ -1,6 +1,6 @@
 {%extends 'gallery/base.html'%}
 {%block content%}
-{%for photo in photo %}
+{%for p in photo %}
 <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
 
 <body>
@@ -26,7 +26,7 @@
                     </div>
                     <div class="modal-body">
                         <img src="{{p.image.url}}" alt="Image" width='500' length='600'>
-                        <p>location: {{photo.location}}</p><br>
+                        <p>location: {{photop.location}}</p><br>
 
                         <button class="btn btn-primary" onclick="imageurl('{{image.id}}-url')">Copy Image
                             link</button>

@@ -1,6 +1,6 @@
 {%extends 'gallery/base.html'%}
 {%block content%}
-{%for photo in photo %}
+{%for p in photo %}
 <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
 
 <body>
@@ -8,7 +8,7 @@
     <div class="col-md-6">
         <div class="card">
             <a data-toggle="modal" data-target="#{{photo.id}}">
-                <img style="padding-top:40px; padding-bottom:40px;" src="{{p.image.url}}" alt="Image" height="300"
+                <img style="padding-top:40px; padding-bottom:40px;" src="{{photo.image.url}}" alt="Image" height="300"
                     width="300"><br><br>
             </a>
         </div>
@@ -21,11 +21,11 @@
                 <div class="card">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <p>{{p.name}}</p>
-                        <p>{{p.description}}</p>
+                        <p>{{photo.name}}</p>
+                        <p>{{photo.description}}</p>
                     </div>
                     <div class="modal-body">
-                        <img src="{{p.image.url}}" alt="Image" width='500' length='600'>
+                        <img src="{{photo.image.url}}" alt="Image" width='500' length='600'>
                         <p>location: {{photo.location}}</p><br>
 
                         <button class="btn btn-primary" onclick="imageurl('{{image.id}}-url')">Copy Image

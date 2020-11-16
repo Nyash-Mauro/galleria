@@ -3,13 +3,13 @@ from django import forms
 from django.http import HttpResponse, Http404
 import datetime as dt
 from cloudinary.forms import cl_init_js_callbacks
-from .models import mygalleria_image, Category, Location
+from .models import mygalleria_image, Category,Location
 from .forms import PhotoForm
 
 
 def index(request):
     photo = mygalleria_image.display_photo()
-    return render(request, 'index.html', {"photo": photo})
+    return render(request, 'upload.html', {"photo": photo})
 
 
 def photo_today(request):
